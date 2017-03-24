@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app">
+        {{ message }}
+        <span v-bind:title="title">
+            鼠标悬停
+        </span>
+        <p v-if="seen">现在你看到我了</p>
+        <ul>
+            <li v-for="todo in todoList">{{todo}}</li>
+        </ul>
+
+        <button v-on:click="reverseMessage">逆转消息</button>
+        <div class="inputs">
+            <p>{{inputs}}</p>
+            <input type="text" v-model="inputs">
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!',
+                title: '页面加载与' + new Date(),
+                seen: true,
+                todoList: ['a','b','c'],
+                inputs: 'vue demo'
+            },
+            methods: {
+                reverseMessage: function () {
+                    this.message = this.message.split('').reverse().join('')
+                }
+            }
+        })
+    </script>
+</body>
+</html>
