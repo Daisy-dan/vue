@@ -10,4 +10,4 @@ https://cn.vuejs.org/v2/guide/events.html     ---- event
 
 
 启动
-根目录  ---- npm run dev  
+根目录  ---- npm run dev     http://localhost:8080/
