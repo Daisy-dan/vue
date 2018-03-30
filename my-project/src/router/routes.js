@@ -2,6 +2,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Index from '@/components/Index'
 import ListInfo from '@/components/ListInfo'
 import AddInfo from '@/components/AddInfo'
+import Render from '@/components/Render'
 
 
 
@@ -28,6 +29,11 @@ export default [
         path: '/web/list/add',
         name: 'AddInfo',
         component: AddInfo,
+      },
+      {
+        path: '/web/render',
+        name: 'Render',
+        component: Render,
       }
     ]
   }

@@ -14,8 +14,8 @@
               <template slot="title"><i class="el-icon-message"></i>导航一</template>
               <el-menu-item-group>
                 <template slot="title">分组一</template>
-                <el-menu-item index="1-1"><router-link to="/web/list">List</router-link></el-menu-item>
-                <el-menu-item index="1-2">选项2</el-menu-item>
+                <el-menu-item index="1-1"><router-link to="/web/list">组件</router-link></el-menu-item>
+                <el-menu-item index="1-2"><router-link to="/web/render">模板语法</router-link></el-menu-item>
               </el-menu-item-group>
 
               <el-menu-item-group title="分组2">
