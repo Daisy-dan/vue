@@ -1,13 +1,29 @@
-# vue demo
+# vue-new1
 
-https://cn.vuejs.org/v2/api/   ---- api
+## Project setup
+```
+npm install
+```
 
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-http://element.eleme.io/#/zh-CN/component/    ---- element-ui
+### Compiles and minifies for production
+```
+npm run build
+```
 
+### Run your tests
+```
+npm run test
+```
 
-https://cn.vuejs.org/v2/guide/events.html     ---- event
+### Lints and fixes files
+```
+npm run lint
+```
 
-
-启动
-根目录  ---- npm run dev     http://localhost:8080/
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
