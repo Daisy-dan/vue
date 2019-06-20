@@ -10,7 +10,9 @@
         </div>
 
 
-
+        <div>store里的值{{this.$store.state.count}}</div>
+        <br/>
+        <button @click="incCount()">增加store里的值的数量</button>
         
     </div>
 </template>
@@ -22,6 +24,8 @@
  * data-aid  --e.srcElement.dataset.aid  获取dom属性
  */
 // import { all } from 'q';
+
+import store from '../vuex/store.js'
 export default {
     name: 'TodoList',
     data() {
@@ -31,6 +35,7 @@ export default {
         }
         
     },
+     store,
     methods:{
         addItem(e){
             if(this.msg != ""){
@@ -49,7 +54,10 @@ export default {
         deleteItem(k,e){
             this.list.splice(k,1)
             alert(e.srcElement.dataset.bid)
-        }
+        },
+        incCount(){
+                this.$store.commit('incCount'); //触发store里的数据
+            }
     }
 }
 </script>

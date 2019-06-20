@@ -17,6 +17,11 @@
         <BrotherComponent/>
         <BrotherComponent2/>
 
+        <div>store里的值{{this.$store.state.count}}</div>
+        <div>store里的值getters方法执行后{{this.$store.getters.computedCount}}</div>
+        <br/>
+        <button @click="incCount()">增加store里的值的数量</button>
+        <button @click="inACount()">执行actions</button>
     </div>
 </template>
 <script>
@@ -24,6 +29,7 @@
      * vue-router
      * axios
      * 父子组件传值
+     * vuex
      */
     // 引入组件
     import HelloWorld from './HelloWorld.vue'
@@ -32,6 +38,7 @@
     import Life from './Life.vue'
     import BrotherComponent from './BrotherComponent.vue'
     import BrotherComponent2 from './BrotherComponent2.vue'
+    import store from '../vuex/store.js'
 
     //哪里用哪里引入npm install axios --save
     import Axios from 'axios'
@@ -47,6 +54,7 @@
             BrotherComponent,
             BrotherComponent2
         },
+        store,
         data() {
             return {
                 flag:true,
@@ -82,6 +90,12 @@
             },
             parRun(){
                 alert("父组件方法parRun")
+            },
+            incCount(){
+                this.$store.commit('incCount'); //触发store里的数据
+            },
+            inACount(){
+                this.$store.dispatch('inMutationsCount') //触发action里的数据
             }
         },
         mounted(){
